@@ -12,8 +12,8 @@ export const startDB = async () => {
         await sequelize.authenticate();
         // Usamos force: false para cuidar tus datos
         await sequelize.sync({ force: false });
-        console.log('Conexion a la db esta lista');
+        console.log('Conexión a la base de datos establecida correctamente.');
     } catch (error) {
-        console.error('No se pudo conectar a la db:', error);
+        console.error('Error al conectar con la base de datos:', error);
     }
 };
